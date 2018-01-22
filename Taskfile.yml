@@ -1,0 +1,60 @@
+build-cmd:
+  desc: Builds the vst-guide command and its dependencies.
+  dir: cmd/vst-guide
+  cmds:
+    - go build -v -i main.go
+
+build-web:
+  desc: Builds the Node.js-based web application.
+  dir: web
+  cmds:
+    - quasar build
+
+build-all:
+  desc: Builds all components of VST Guide.
+  deps: ["build-web", "build-cmd"]
+
+dev-cmd:
+  desc: Starts watching the vst-guide command and its dependencies.
+  dir: cmd/vst-guide
+  cmds: []
+
+dev-web:
+  desc: Starts watching the Node.js-based web application.
+  dir: web
+  cmds:
+    - quasar dev
+
+dev-all:
+  desc: Starts watching all components of VST Guide.
+  deps: ["dev-web", "dev-cmd"]
+
+install-web:
+  desc: Installs dependencies for the web application with NPM.
+  dir: web
+  cmds:
+    - npm install
+
+update-web:
+  desc: Updates dependencies for the web application with NPM.
+  dir: web
+  cmds:
+    - npm update
+
+clean-web:
+  desc: Cleans the build directories in the web application.
+  dir: web
+  cmds:
+    - quasar clean
+
+serve-web:
+  desc: Serves the built web application in a local server with hot-reload.
+  dir: web
+  cmds:
+    - quasar serve dist
+
+run-cmd:
+  desc: Runs the main application
+  dir: cmd/vst-guide
+  cmd:
+    - go run main.go

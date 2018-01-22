@@ -1,0 +1,18 @@
+{
+  "app_name": "VST Guide",
+  "environments": [
+    {"arch": "amd64", "os": "darwin"},
+    {"arch": "amd64", "os": "linux"},
+    {
+      "arch": "amd64",
+      "os": "windows",
+      "env": {
+        "CGO_ENABLED": "1"
+      }
+    }
+  ],
+  "icon_path_darwin": "resources/icon.icns",
+  "icon_path_linux": "resources/icon.png",
+  "icon_path_windows": "resources/icon.ico",
+  "output_path": "output"
+}
