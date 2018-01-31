@@ -47,3 +47,12 @@ app.
 Babel is used to compile down from ES6, and thus ES6 should be used for
 any and all Javascript written for the application to keep things
 pleasant to write and maintain.
+
+## Thanks
+
+Thanks to MDA for open-sourcing their plugin library
+(https://sourceforge.net/projects/mda-vst/). Not only are the plugins
+high quality, but it's a great learning tool for others now, and it can
+really help packages like Audiorack to automate our testing!
+Additionally, we can be sure Audiorack works properly with MDA plugins
+as a result.
